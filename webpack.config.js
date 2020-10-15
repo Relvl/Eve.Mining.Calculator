@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
 				removeEmptyChunks: __watch(false, true),
 				minimizer: [
 					new TerserWebpackPlugin({
-						sourceMap: true,
+						sourceMap: __watch(true, false),
 						cache: __watch(true, false),
 						terserOptions: {
 							mangle: false,

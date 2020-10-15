@@ -1,12 +1,25 @@
-export class EMineralDictionary {
-    static TRITANIUM = new EMineralDictionary("Tritanium");
-    static PYERITE = new EMineralDictionary("Pyerite");
-    static MEXALLON = new EMineralDictionary("Mexallon");
-    static ISOGEN = new EMineralDictionary("Isogen");
-    static NOCXIUM = new EMineralDictionary("Nocxium");
-    static ZYDRINE = new EMineralDictionary("Zydrine");
-    static MEGACYTE = new EMineralDictionary("Megacyte");
-    static MORPHITE = new EMineralDictionary("Morphite");
+export enum EMineralDictionary {
+    TRITANIUM = "TRITANIUM",
+    PYERITE = "PYERITE",
+    MEXALLON = "MEXALLON",
+    ISOGEN = "ISOGEN",
+    NOCXIUM = "NOCXIUM",
+    ZYDRINE = "ZYDRINE",
+    MEGACYTE = "MEGACYTE",
+    MORPHITE = "MORPHITE",
+}
+
+export class MineralDictionaryElement {
+    static ALL = {
+        [EMineralDictionary.TRITANIUM]: new MineralDictionaryElement("Tritanium"),
+        [EMineralDictionary.PYERITE]: new MineralDictionaryElement("Pyerite"),
+        [EMineralDictionary.MEXALLON]: new MineralDictionaryElement("Mexallon"),
+        [EMineralDictionary.ISOGEN]: new MineralDictionaryElement("Isogen"),
+        [EMineralDictionary.NOCXIUM]: new MineralDictionaryElement("Nocxium"),
+        [EMineralDictionary.ZYDRINE]: new MineralDictionaryElement("Zydrine"),
+        [EMineralDictionary.MEGACYTE]: new MineralDictionaryElement("Megacyte"),
+        [EMineralDictionary.MORPHITE]: new MineralDictionaryElement("Morphite"),
+    };
 
     public readonly volume = 0.1;
 

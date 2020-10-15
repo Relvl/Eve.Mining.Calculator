@@ -1,28 +1,30 @@
 {
-  "compilerOptions": {
-    "suppressExcessPropertyErrors": true,
-    "strictNullChecks": false,
-    "skipLibCheck": true,
-    "target": "esnext",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "noEmit": true,
-    "strict": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "lib": [
-      "dom",
-      "es6",
-      "es2019"
+    "compilerOptions": {
+        "target": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "noEmit": true,
+        "strict": true,
+        // Disallow features that require cross-file information for emit.
+        "isolatedModules": true,
+        "jsx": "react",
+        "esModuleInterop": true,
+        "suppressExcessPropertyErrors": true,
+        "strictNullChecks": false,
+        "skipLibCheck": true,
+        "lib": [
+            "dom",
+            "es6",
+            "es2019"
+        ],
+        "sourceMap": true
+    },
+    "include": [
+        "./**/*.tsx",
+        "./**/*.ts"
     ],
-    "sourceMap": true
-  },
-  "include": [
-    "./**/*.tsx",
-    "./**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }
