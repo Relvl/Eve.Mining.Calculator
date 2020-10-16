@@ -1,0 +1,1638 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*! ../GetIntrinsic */
+
+/*! ../core/AComponent */
+
+/*! ./../../../webpack/buildin/global.js */
+
+/*! ./../../webpack/buildin/global.js */
+
+/*! ./../process/browser.js */
+
+/*! ./../webpack/buildin/global.js */
+
+/*! ./Application */
+
+/*! ./Deferred */
+
+/*! ./_baseCreate.js */
+
+/*! ./_baseIteratee.js */
+
+/*! ./_cb.js */
+
+/*! ./_chainResult.js */
+
+/*! ./_collectNonEnumProps.js */
+
+/*! ./_createAssigner.js */
+
+/*! ./_createEscaper.js */
+
+/*! ./_createIndexFinder.js */
+
+/*! ./_createPredicateIndexFinder.js */
+
+/*! ./_createReduce.js */
+
+/*! ./_createSizePropertyCheck.js */
+
+/*! ./_deepGet.js */
+
+/*! ./_escapeMap.js */
+
+/*! ./_executeBound.js */
+
+/*! ./_flatten.js */
+
+/*! ./_getByteLength.js */
+
+/*! ./_getLength.js */
+
+/*! ./_group.js */
+
+/*! ./_has.js */
+
+/*! ./_isArrayLike.js */
+
+/*! ./_isBufferLike.js */
+
+/*! ./_keyInObj.js */
+
+/*! ./_optimizeCb.js */
+
+/*! ./_setup.js */
+
+/*! ./_shallowProperty.js */
+
+/*! ./_tagTester.js */
+
+/*! ./_unescapeMap.js */
+
+/*! ./after.js */
+
+/*! ./allKeys.js */
+
+/*! ./before.js */
+
+/*! ./bind.js */
+
+/*! ./bindAll.js */
+
+/*! ./calculator/Calculator */
+
+/*! ./callBind */
+
+/*! ./chain.js */
+
+/*! ./checkPropTypes */
+
+/*! ./chunk.js */
+
+/*! ./cjs/react-dom.development.js */
+
+/*! ./cjs/react-is.development.js */
+
+/*! ./cjs/react.development.js */
+
+/*! ./cjs/scheduler-tracing.development.js */
+
+/*! ./cjs/scheduler.development.js */
+
+/*! ./clone.js */
+
+/*! ./compact.js */
+
+/*! ./compose.js */
+
+/*! ./constant.js */
+
+/*! ./contains.js */
+
+/*! ./core/AComponent */
+
+/*! ./countBy.js */
+
+/*! ./create.js */
+
+/*! ./debounce.js */
+
+/*! ./defaults.js */
+
+/*! ./defer.js */
+
+/*! ./delay.js */
+
+/*! ./difference.js */
+
+/*! ./each.js */
+
+/*! ./escape.js */
+
+/*! ./every.js */
+
+/*! ./extend.js */
+
+/*! ./extendOwn.js */
+
+/*! ./factoryWithTypeCheckers */
+
+/*! ./filter.js */
+
+/*! ./find.js */
+
+/*! ./findIndex.js */
+
+/*! ./findKey.js */
+
+/*! ./findLastIndex.js */
+
+/*! ./findWhere.js */
+
+/*! ./first.js */
+
+/*! ./flatten.js */
+
+/*! ./functions.js */
+
+/*! ./global.tsx */
+
+/*! ./groupBy.js */
+
+/*! ./has.js */
+
+/*! ./identity.js */
+
+/*! ./implementation */
+
+/*! ./index-default.js */
+
+/*! ./index.js */
+
+/*! ./indexBy.js */
+
+/*! ./indexOf.js */
+
+/*! ./init.tsx */
+
+/*! ./initial.js */
+
+/*! ./intersection.js */
+
+/*! ./invert.js */
+
+/*! ./invoke.js */
+
+/*! ./isArguments */
+
+/*! ./isArguments.js */
+
+/*! ./isArray.js */
+
+/*! ./isArrayBuffer.js */
+
+/*! ./isBoolean.js */
+
+/*! ./isDataView.js */
+
+/*! ./isDate.js */
+
+/*! ./isElement.js */
+
+/*! ./isEmpty.js */
+
+/*! ./isEqual.js */
+
+/*! ./isError.js */
+
+/*! ./isFinite.js */
+
+/*! ./isFunction.js */
+
+/*! ./isMap.js */
+
+/*! ./isMatch.js */
+
+/*! ./isNaN.js */
+
+/*! ./isNull.js */
+
+/*! ./isNumber.js */
+
+/*! ./isObject.js */
+
+/*! ./isRegExp.js */
+
+/*! ./isSet.js */
+
+/*! ./isString.js */
+
+/*! ./isSymbol.js */
+
+/*! ./isTypedArray.js */
+
+/*! ./isUndefined.js */
+
+/*! ./isWeakMap.js */
+
+/*! ./isWeakSet.js */
+
+/*! ./iteratee.js */
+
+/*! ./keys.js */
+
+/*! ./last.js */
+
+/*! ./lastIndexOf.js */
+
+/*! ./lib/ReactPropTypesSecret */
+
+/*! ./map.js */
+
+/*! ./mapObject.js */
+
+/*! ./matcher.js */
+
+/*! ./max.js */
+
+/*! ./memoize.js */
+
+/*! ./min.js */
+
+/*! ./mixin.js */
+
+/*! ./negate.js */
+
+/*! ./noop.js */
+
+/*! ./now.js */
+
+/*! ./object.js */
+
+/*! ./omit.js */
+
+/*! ./once.js */
+
+/*! ./pairs.js */
+
+/*! ./partial.js */
+
+/*! ./partition.js */
+
+/*! ./pick.js */
+
+/*! ./pluck.js */
+
+/*! ./polyfill */
+
+/*! ./property.js */
+
+/*! ./propertyOf.js */
+
+/*! ./random.js */
+
+/*! ./range.js */
+
+/*! ./reduce.js */
+
+/*! ./reduceRight.js */
+
+/*! ./reject.js */
+
+/*! ./rest.js */
+
+/*! ./restArguments.js */
+
+/*! ./result.js */
+
+/*! ./sample.js */
+
+/*! ./scss/application.scss */
+
+/*! ./scss/component/c-button.scss */
+
+/*! ./scss/component/c-checkbox.scss */
+
+/*! ./scss/component/c-combobox.scss */
+
+/*! ./scss/component/c-header.scss */
+
+/*! ./scss/component/c-icon.scss */
+
+/*! ./scss/component/c-inline-dropdown.scss */
+
+/*! ./scss/component/c-notice.scss */
+
+/*! ./scss/component/c-text-field.scss */
+
+/*! ./shams */
+
+/*! ./shim */
+
+/*! ./shuffle.js */
+
+/*! ./size.js */
+
+/*! ./some.js */
+
+/*! ./sortBy.js */
+
+/*! ./sortedIndex.js */
+
+/*! ./tap.js */
+
+/*! ./template.js */
+
+/*! ./templateSettings.js */
+
+/*! ./throttle.js */
+
+/*! ./times.js */
+
+/*! ./toArray.js */
+
+/*! ./underscore-array-methods.js */
+
+/*! ./underscore.js */
+
+/*! ./unescape.js */
+
+/*! ./union.js */
+
+/*! ./uniq.js */
+
+/*! ./uniqueId.js */
+
+/*! ./unzip.js */
+
+/*! ./util.inspect */
+
+/*! ./values.js */
+
+/*! ./where.js */
+
+/*! ./without.js */
+
+/*! ./wrap.js */
+
+/*! ./zip.js */
+
+/*! @babel/runtime/helpers/esm/extends */
+
+/*! @babel/runtime/helpers/esm/inheritsLoose */
+
+/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
+
+/*! array-filter */
+
+/*! available-typed-arrays */
+
+/*! deep-equal */
+
+/*! define-properties */
+
+/*! es-abstract/GetIntrinsic */
+
+/*! es-abstract/helpers/callBind */
+
+/*! es-abstract/helpers/callBound */
+
+/*! es-abstract/helpers/getOwnPropertyDescriptor */
+
+/*! es-get-iterator */
+
+/*! exports provided: Application, mergeArrays, uniqueArray, groupArray, mapObjectToArray, mapObjectToObject, flatternArray */
+
+/*! exports provided: Calculator */
+
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __HistoryContext, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+
+/*! exports provided: VERSION, restArguments, isObject, isNull, isUndefined, isBoolean, isElement, isString, isNumber, isDate, isRegExp, isError, isSymbol, isMap, isWeakMap, isSet, isWeakSet, isArrayBuffer, isDataView, isArray, isFunction, isArguments, isFinite, isNaN, isTypedArray, isEmpty, isMatch, isEqual, keys, allKeys, values, pairs, invert, functions, methods, extend, extendOwn, assign, defaults, create, clone, tap, has, mapObject, identity, constant, noop, property, propertyOf, matcher, matches, times, random, now, escape, unescape, templateSettings, template, result, uniqueId, chain, iteratee, partial, bind, bindAll, memoize, delay, defer, throttle, debounce, wrap, negate, compose, after, before, once, findKey, findIndex, findLastIndex, sortedIndex, indexOf, lastIndexOf, find, detect, findWhere, each, forEach, map, collect, reduce, foldl, inject, reduceRight, foldr, filter, select, reject, every, all, some, any, contains, includes, include, invoke, pluck, where, max, min, shuffle, sample, sortBy, groupBy, indexBy, countBy, partition, toArray, size, pick, omit, first, head, take, initial, last, rest, tail, drop, compact, flatten, without, uniq, unique, union, intersection, difference, unzip, transpose, zip, object, range, chunk, mixin, default */
+
+/*! exports provided: VERSION, root, ArrayProto, ObjProto, SymbolProto, push, slice, toString, hasOwnProperty, supportsArrayBuffer, nativeIsArray, nativeKeys, nativeCreate, nativeIsView, _isNaN, _isFinite, hasEnumBug, nonEnumerableProps, MAX_ARRAY_INDEX */
+
+/*! exports provided: createBrowserHistory, createHashHistory, createMemoryHistory, createLocation, locationsAreEqual, parsePath, createPath */
+
+/*! exports provided: default */
+
+/*! exports provided: default, VERSION, restArguments, isObject, isNull, isUndefined, isBoolean, isElement, isString, isNumber, isDate, isRegExp, isError, isSymbol, isMap, isWeakMap, isSet, isWeakSet, isArrayBuffer, isDataView, isArray, isFunction, isArguments, isFinite, isNaN, isTypedArray, isEmpty, isMatch, isEqual, keys, allKeys, values, pairs, invert, functions, methods, extend, extendOwn, assign, defaults, create, clone, tap, has, mapObject, identity, constant, noop, property, propertyOf, matcher, matches, times, random, now, escape, unescape, templateSettings, template, result, uniqueId, chain, iteratee, partial, bind, bindAll, memoize, delay, defer, throttle, debounce, wrap, negate, compose, after, before, once, findKey, findIndex, findLastIndex, sortedIndex, indexOf, lastIndexOf, find, detect, findWhere, each, forEach, map, collect, reduce, foldl, inject, reduceRight, foldr, filter, select, reject, every, all, some, any, contains, includes, include, invoke, pluck, where, max, min, shuffle, sample, sortBy, groupBy, indexBy, countBy, partition, toArray, size, pick, omit, first, head, take, initial, last, rest, tail, drop, compact, flatten, without, uniq, unique, union, intersection, difference, unzip, transpose, zip, object, range, chunk, mixin */
+
+/*! foreach */
+
+/*! function-bind */
+
+/*! has */
+
+/*! has-symbols */
+
+/*! has-symbols/shams */
+
+/*! history */
+
+/*! hoist-non-react-statics */
+
+/*! is-arguments */
+
+/*! is-bigint */
+
+/*! is-boolean-object */
+
+/*! is-date-object */
+
+/*! is-map */
+
+/*! is-number-object */
+
+/*! is-regex */
+
+/*! is-set */
+
+/*! is-string */
+
+/*! is-symbol */
+
+/*! is-typed-array */
+
+/*! is-weakmap */
+
+/*! is-weakset */
+
+/*! isarray */
+
+/*! mini-create-react-context */
+
+/*! no exports provided */
+
+/*! no static exports found */
+
+/*! object-assign */
+
+/*! object-inspect */
+
+/*! object-is */
+
+/*! object-keys */
+
+/*! object.assign */
+
+/*! path-to-regexp */
+
+/*! prop-types */
+
+/*! prop-types/checkPropTypes */
+
+/*! react */
+
+/*! react-dom */
+
+/*! react-is */
+
+/*! react-router */
+
+/*! react-router-dom */
+
+/*! regexp.prototype.flags */
+
+/*! resolve-pathname */
+
+/*! scheduler */
+
+/*! scheduler/tracing */
+
+/*! side-channel */
+
+/*! tiny-invariant */
+
+/*! tiny-warning */
+
+/*! underscore */
+
+/*! value-equal */
+
+/*! which-boxed-primitive */
+
+/*! which-collection */
+
+/*! which-typed-array */
+
+/*!******************!*\
+  !*** ./init.tsx ***!
+  \******************/
+
+/*!********************!*\
+  !*** ./global.tsx ***!
+  \********************/
+
+/*!*************************!*\
+  !*** ./Application.tsx ***!
+  \*************************/
+
+/*!**************************!*\
+  !*** ./core/Deferred.ts ***!
+  \**************************/
+
+/*!*****************************!*\
+  !*** ./core/AComponent.tsx ***!
+  \*****************************/
+
+/*!*******************************!*\
+  !*** ./scss/application.scss ***!
+  \*******************************/
+
+/*!********************************!*\
+  !*** ./util.inspect (ignored) ***!
+  \********************************/
+
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./calculator/Calculator.tsx ***!
+  \***********************************/
+
+/*!************************************!*\
+  !*** ./scss/component/c-icon.scss ***!
+  \************************************/
+
+/*!*************************************!*\
+  !*** ./node_modules/react/index.js ***!
+  \*************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/is-map/index.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./node_modules/is-set/index.js ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./scss/component/c-button.scss ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./scss/component/c-header.scss ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./scss/component/c-notice.scss ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/foreach/index.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/has/src/index.js ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/is-regex/index.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/object-is/shim.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./scss/component/c-checkbox.scss ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./scss/component/c-combobox.scss ***!
+  \****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/is-bigint/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/is-string/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/is-symbol/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/object-is/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/react-dom/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/scheduler/index.js ***!
+  \*****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/deep-equal/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/is-weakmap/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/is-weakset/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+
+/*!******************************************!*\
+  !*** ./scss/component/c-text-field.scss ***!
+  \******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/has-symbols/index.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/has-symbols/shams.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/object-keys/index.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/scheduler/tracing.js ***!
+  \*******************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/array-filter/index.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/is-arguments/index.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/object-is/polyfill.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/object.assign/shim.js ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/side-channel/index.js ***!
+  \********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/function-bind/index.js ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/history/esm/history.js ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/object-assign/index.js ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/object.assign/index.js ***!
+  \*********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/is-date-object/index.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/is-typed-array/index.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/object-inspect/index.js ***!
+  \**********************************************/
+
+/*!**********************************************!*\
+  !*** ./node_modules/path-to-regexp/index.js ***!
+  \**********************************************/
+
+/*!***********************************************!*\
+  !*** ./node_modules/es-get-iterator/index.js ***!
+  \***********************************************/
+
+/*!***********************************************!*\
+  !*** ./scss/component/c-inline-dropdown.scss ***!
+  \***********************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/is-number-object/index.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/object.assign/polyfill.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/_cb.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/has.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/map.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/max.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/min.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/now.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/tap.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/underscore/modules/zip.js ***!
+  \************************************************/
+
+/*!************************************************!*\
+  !*** ./node_modules/which-collection/index.js ***!
+  \************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/define-properties/index.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/is-boolean-object/index.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/object-keys/isArguments.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/_has.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/bind.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/each.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/find.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/keys.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/last.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/noop.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/omit.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/once.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/pick.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/rest.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/size.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/some.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/uniq.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/underscore/modules/wrap.js ***!
+  \*************************************************/
+
+/*!*************************************************!*\
+  !*** ./node_modules/which-typed-array/index.js ***!
+  \*************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/es-abstract/GetIntrinsic.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/object-is/implementation.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/after.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/chain.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/chunk.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/clone.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/defer.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/delay.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/every.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/first.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/index.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/isMap.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/isNaN.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/isSet.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/mixin.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/pairs.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/pluck.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/range.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/times.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/union.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/unzip.js ***!
+  \**************************************************/
+
+/*!**************************************************!*\
+  !*** ./node_modules/underscore/modules/where.js ***!
+  \**************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/_group.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/_setup.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/before.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/create.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/escape.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/extend.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/filter.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/invert.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/invoke.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/isDate.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/isNull.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/negate.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/object.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/random.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/reduce.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/reject.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/result.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/sample.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/sortBy.js ***!
+  \***************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/underscore/modules/values.js ***!
+  \***************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/object-keys/implementation.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/allKeys.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/bindAll.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/compact.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/compose.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/countBy.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/findKey.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/flatten.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/groupBy.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/indexBy.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/indexOf.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/initial.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/isArray.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/isEmpty.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/isEqual.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/isError.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/isMatch.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/matcher.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/memoize.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/partial.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/shuffle.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/toArray.js ***!
+  \****************************************************/
+
+/*!****************************************************!*\
+  !*** ./node_modules/underscore/modules/without.js ***!
+  \****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/react/cjs/react.development.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/shim.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/_deepGet.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/_flatten.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/constant.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/contains.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/debounce.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/defaults.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/identity.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isFinite.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isNumber.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isObject.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isRegExp.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isString.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/isSymbol.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/iteratee.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/property.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/template.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/throttle.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/unescape.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/underscore/modules/uniqueId.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/value-equal/esm/value-equal.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/which-boxed-primitive/index.js ***!
+  \*****************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/available-typed-arrays/index.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/es-abstract/helpers/callBind.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/function-bind/implementation.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/object.assign/implementation.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/index.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/_keyInObj.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/extendOwn.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/findIndex.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/findWhere.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/functions.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/index-all.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/isBoolean.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/isElement.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/isWeakMap.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/isWeakSet.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/mapObject.js ***!
+  \******************************************************/
+
+/*!******************************************************!*\
+  !*** ./node_modules/underscore/modules/partition.js ***!
+  \******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/es-abstract/helpers/callBound.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/react-router/esm/react-router.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/_escapeMap.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/_getLength.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/_tagTester.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/difference.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/isDataView.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/isFunction.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/propertyOf.js ***!
+  \*******************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/underscore/modules/underscore.js ***!
+  \*******************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/_baseCreate.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/_optimizeCb.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/isArguments.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/isUndefined.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/lastIndexOf.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/reduceRight.js ***!
+  \********************************************************/
+
+/*!********************************************************!*\
+  !*** ./node_modules/underscore/modules/sortedIndex.js ***!
+  \********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/polyfill.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/underscore/modules/_chainResult.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/underscore/modules/_isArrayLike.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/underscore/modules/_unescapeMap.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/underscore/modules/intersection.js ***!
+  \*********************************************************/
+
+/*!*********************************************************!*\
+  !*** ./node_modules/underscore/modules/isTypedArray.js ***!
+  \*********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/_baseIteratee.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/_createReduce.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/_executeBound.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/_isBufferLike.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/findLastIndex.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/index-default.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/isArrayBuffer.js ***!
+  \**********************************************************/
+
+/*!**********************************************************!*\
+  !*** ./node_modules/underscore/modules/restArguments.js ***!
+  \**********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/underscore/modules/_createEscaper.js ***!
+  \***********************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/underscore/modules/_getByteLength.js ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/tiny-warning/dist/tiny-warning.esm.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/underscore/modules/_createAssigner.js ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/scheduler/cjs/scheduler.development.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/underscore/modules/_shallowProperty.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/underscore/modules/templateSettings.js ***!
+  \*************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/deep-equal/node_modules/isarray/index.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/implementation.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/underscore/modules/_createIndexFinder.js ***!
+  \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
+  \****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./node_modules/underscore/modules/_collectNonEnumProps.js ***!
+  \*****************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./node_modules/mini-create-react-context/dist/esm/index.js ***!
+  \******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./node_modules/path-to-regexp/node_modules/isarray/index.js ***!
+  \*******************************************************************/
+
+/*!********************************************************************!*\
+  !*** ./node_modules/es-get-iterator/node_modules/isarray/index.js ***!
+  \********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./node_modules/underscore/modules/_createSizePropertyCheck.js ***!
+  \*********************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./node_modules/underscore/modules/underscore-array-methods.js ***!
+  \*********************************************************************/
+
+/*!************************************************************************!*\
+  !*** ./node_modules/underscore/modules/_createPredicateIndexFinder.js ***!
+  \************************************************************************/
+
+/*!******************************************************************************!*\
+  !*** ./node_modules/is-typed-array/node_modules/es-abstract/GetIntrinsic.js ***!
+  \******************************************************************************/
+
+/*!*******************************************************************************!*\
+  !*** ./node_modules/es-get-iterator/node_modules/es-abstract/GetIntrinsic.js ***!
+  \*******************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./node_modules/which-typed-array/node_modules/es-abstract/GetIntrinsic.js ***!
+  \*********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
+  \**********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./node_modules/is-typed-array/node_modules/es-abstract/helpers/callBind.js ***!
+  \**********************************************************************************/
+
+/*!***********************************************************************************!*\
+  !*** ./node_modules/es-get-iterator/node_modules/es-abstract/helpers/callBind.js ***!
+  \***********************************************************************************/
+
+/*!***********************************************************************************!*\
+  !*** ./node_modules/is-typed-array/node_modules/es-abstract/helpers/callBound.js ***!
+  \***********************************************************************************/
+
+/*!************************************************************************************!*\
+  !*** ./node_modules/es-get-iterator/node_modules/es-abstract/helpers/callBound.js ***!
+  \************************************************************************************/
+
+/*!*************************************************************************************!*\
+  !*** ./node_modules/which-typed-array/node_modules/es-abstract/helpers/callBind.js ***!
+  \*************************************************************************************/
+
+/*!**************************************************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/node_modules/es-abstract/GetIntrinsic.js ***!
+  \**************************************************************************************/
+
+/*!**************************************************************************************!*\
+  !*** ./node_modules/which-typed-array/node_modules/es-abstract/helpers/callBound.js ***!
+  \**************************************************************************************/
+
+/*!******************************************************************************************!*\
+  !*** ./node_modules/regexp.prototype.flags/node_modules/es-abstract/helpers/callBind.js ***!
+  \******************************************************************************************/
+
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/is-typed-array/node_modules/es-abstract/helpers/getOwnPropertyDescriptor.js ***!
+  \**************************************************************************************************/
+
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/which-typed-array/node_modules/es-abstract/helpers/getOwnPropertyDescriptor.js ***!
+  \*****************************************************************************************************/
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./scss/component/c-button.scss ./scss/component/c-checkbox.scss ./scss/component/c-combobox.scss ./scss/component/c-header.scss ./scss/component/c-icon.scss ./scss/component/c-inline-dropdown.scss ./scss/component/c-notice.scss ./scss/component/c-text-field.scss ./global.tsx ./init.tsx ./scss/application.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */
+
+/** @license React v0.19.1
+ * scheduler-tracing.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v0.19.1
+ * scheduler.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.14.0
+ * react-dom.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.14.0
+ * react.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
